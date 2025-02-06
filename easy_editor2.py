@@ -19,6 +19,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap
 # Импортируем классы из библиотеки PIL для обработки изображений
 from PIL import Image, ImageFilter
+
 # Создаем основное приложение PyQt5
 app = QApplication([])
 # Создаем главное окно приложения
@@ -27,6 +28,7 @@ win = QWidget()
 win.resize(700, 500)
 # Устанавливаем заголовок окна
 win.setWindowTitle('Easy Editor')
+
 # Создаем метку для отображения изображения с текстом "Картинка"
 lb_image = QLabel("Картинка")
 # Создаем кнопку для выбора папки с надписью "Папка"
@@ -124,6 +126,11 @@ class ImageProcessor():
         self.filename = filename    # Сохраняем имя файла
         image_path = os.path.join(dir, filename)    # Составляем полный путь к файлу
         self.image = Image.open(image_path)    # Открываем изображение
+
+
+
+
+
 
     def do_bw(self):
         """Преобразует изображение в черно-белое"""
